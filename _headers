@@ -1,0 +1,10 @@
+# Cloudflare Pages / Netlify Security Headers
+/*
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'none'; script-src 'self' 'sha256-J/xw32go4yR458BQioh7etS5LIj6KjsA3jcvhRzIW8s=' 'sha256-ofjs/HY5x5ff4SgIQ9Hwy2rSWaJRXuwOucTcaXL4OtA=' 'sha256-HXkBE58Z0ldlp+pZtOQO5atDFYMnEPQtv6glfSip6yg='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob:; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self'; upgrade-insecure-requests;
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: accelerometer=(), autoplay=(), camera=(), encrypted-media=(), fullscreen=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=()
+  X-Frame-Options: DENY
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin

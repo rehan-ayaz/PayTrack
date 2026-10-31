@@ -1,0 +1,26 @@
+# Operating System Metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment & Sensitive Credentials
+.env
+.env.*
+*.pem
+*.key
+*.cert
+*.crt
+
+# Temporary & Backup Files
+*.bak
+*.old
+*.orig
+*.backup
+*.tmp
+*.log

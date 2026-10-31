@@ -1,0 +1,48 @@
+# ==============================================================================
+# PayTrack Static Website - Apache / LiteSpeed Security Hardening
+# ==============================================================================
+
+# Disable directory indexing
+Options -Indexes -ExecCGI
+
+# Prevent access to hidden files and directories (including .git, .env)
+<FilesMatch "^\.">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order deny,allow
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Prevent access to backup, log, and configuration files
+<FilesMatch "(^#.*#|\.(bak|conf|dist|fla|in[ci]|log|psd|sh|sql|sw[op]|env)|~)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order deny,allow
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# HTTP Security Headers
+<IfModule mod_headers.c>
+    Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'none'; script-src 'self' 'sha256-J/xw32go4yR458BQioh7etS5LIj6KjsA3jcvhRzIW8s=' 'sha256-ofjs/HY5x5ff4SgIQ9Hwy2rSWaJRXuwOucTcaXL4OtA=' 'sha256-HXkBE58Z0ldlp+pZtOQO5atDFYMnEPQtv6glfSip6yg='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob:; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self'; upgrade-insecure-requests;"
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "accelerometer=(), autoplay=(), camera=(), encrypted-media=(), fullscreen=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=()"
+    Header always set X-Frame-Options "DENY"
+    Header always set Cross-Origin-Opener-Policy "same-origin"
+    Header always set Cross-Origin-Resource-Policy "same-origin"
+</IfModule>
+
+# Correct MIME Types for Modern Web Assets
+<IfModule mod_mime.c>
+    AddType image/svg+xml .svg .svgz
+    AddType font/woff2 .woff2
+    AddType application/javascript .js
+    AddType text/css .css
+</IfModule>
