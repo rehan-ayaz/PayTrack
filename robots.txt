@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /assets/vendor/
 
-# Sitemap location
-Sitemap: https://paytrack.app/sitemap.xml
+Sitemap: https://paytrack.rehanayaz.com/sitemap.xml

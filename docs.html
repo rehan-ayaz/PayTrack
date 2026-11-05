@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PayTrack کی آف لائن کھاتہ، ادائیگیوں، پروفائلز اور بیک اپ کے استعمال کی مکمل رہنمائی۔">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#F8FAFC">
+  <link rel="canonical" href="https://paytrack.rehanayaz.com/docs.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PayTrack — Official User Guide">
+  <meta property="og:description" content="PayTrack کی آف لائن کھاتہ اور ادائیگیوں کی مکمل رہنمائی۔">
+  <meta property="og:url" content="https://paytrack.rehanayaz.com/docs.html">
+  <meta property="og:image" content="https://paytrack.rehanayaz.com/assets/thumbnail.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PayTrack — Official User Guide">
+  <meta name="twitter:description" content="PayTrack کی آف لائن کھاتہ اور ادائیگیوں کی مکمل رہنمائی۔">
+  <meta name="twitter:image" content="https://paytrack.rehanayaz.com/assets/thumbnail.png">
+  <title>PayTrack — Official User Guide & Complete Documentation</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preload" href="assets/fonts/gabarito-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face {
+      font-family: 'Gabarito';
+      src: url('assets/fonts/gabarito-latin.woff2') format('woff2');
+      font-weight: 700;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Plus Jakarta Sans';
+      src: url('assets/fonts/plus-jakarta-sans-latin.woff2') format('woff2');
+      font-weight: 400 600;
+      font-display: swap;
+    }
+
+    :root {
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --text: #0F172A;
+      --text-muted: #64748B;
+      --primary: #0284C7;
+      --primary-dark: #0369A1;
+      --primary-light: #E0F2FE;
+      --accent: #F59E0B;
+      --accent-light: #FEF3C7;
+      --success: #10B981;
+      --success-light: #D1FAE5;
+      --danger: #EF4444;
+      --border: #E2E8F0;
+      --sidebar-w: 280px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      direction: rtl;
+      text-align: right;
+    }
+
+    .pt-top-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .pt-brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .pt-brand-wrap svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    .pt-brand-title {
+      font-family: 'Gabarito', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .pt-badge-doc {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .pt-nav-actions {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .pt-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .pt-btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+    .pt-btn-primary:hover {
+      background: var(--primary-dark);
+    }
+
+    .pt-btn-outline {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .pt-btn-outline:hover {
+      background: var(--surface);
+      border-color: var(--text-muted);
+    }
+
+    .pt-doc-layout {
+      display: flex;
+      max-width: 1400px;
+      margin: 0 auto;
+      min-height: calc(100vh - 70px);
+    }
+
+    .pt-doc-sidebar {
+      width: var(--sidebar-w);
+      position: sticky;
+      top: 70px;
+      height: calc(100vh - 70px);
+      overflow-y: auto;
+      padding: 1.5rem 1rem;
+      border-left: 1px solid var(--border);
+      background: var(--surface);
+      flex-shrink: 0;
+    }
+
+    .pt-sidebar-section-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      font-weight: 700;
+      margin: 1.25rem 0 0.5rem 0.5rem;
+    }
+
+    .pt-sidebar-nav {
+      list-style: none;
+    }
+
+    .pt-sidebar-nav a {
+      display: block;
+      padding: 0.5rem 0.75rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.15s ease;
+    }
+
+    .pt-sidebar-nav a:hover,
+    .pt-sidebar-nav a.pt-active {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-weight: 600;
+    }
+
+    .pt-doc-main {
+      min-width: 0;
+      flex: 1;
+      padding: 2.5rem 3rem;
+      max-width: 900px;
+    }
+
+    .pt-doc-hero {
+      background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%);
+      color: #fff;
+      padding: 2.5rem 2rem;
+      border-radius: 16px;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.2);
+    }
+
+    .pt-doc-hero h1 {
+      font-family: 'Gabarito', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    .pt-doc-hero p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-bottom: 1.25rem;
+    }
+
+    .pt-doc-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.85rem;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      backdrop-filter: blur(4px);
+    }
+
+    .pt-doc-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    section {
+      margin-bottom: 3.5rem;
+      scroll-margin-top: 90px;
+    }
+
+    h2 {
+      font-family: 'Gabarito', sans-serif;
+      font-size: 1.6rem;
+      color: var(--text);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      color: var(--primary-dark);
+      margin: 1.5rem 0 0.75rem 0;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: #334155;
+    }
+
+    .pt-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin: 1.25rem 0;
+    }
+
+    .pt-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .pt-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transform: translateY(-2px);
+    }
+
+    .pt-card h4 {
+      font-size: 1.1rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .pt-callout {
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      margin: 1.25rem 0;
+      border-right: 4px solid;
+    }
+    .pt-callout-info {
+      background: var(--primary-light);
+      border-color: var(--primary);
+      color: #0369A1;
+    }
+    .pt-callout-warning {
+      background: var(--accent-light);
+      border-color: var(--accent);
+      color: #92400E;
+    }
+    .pt-callout-success {
+      background: var(--success-light);
+      border-color: var(--success);
+      color: #065F46;
+    }
+
+    .pt-table-wrap {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--surface);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      text-align: right;
+    }
+
+    th, td {
+      padding: 0.875rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background: #F1F5F9;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .pt-steps-list {
+      list-style: none;
+      counter-reset: step-counter;
+      margin: 1.5rem 0;
+    }
+
+    .pt-step-item {
+      position: relative;
+      padding-right: 3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .pt-step-item::before {
+      counter-increment: step-counter;
+      content: counter(step-counter);
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 2.25rem;
+      height: 2.25rem;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .pt-step-item h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .pt-tag {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: #E2E8F0;
+      color: #475569;
+    }
+    .pt-tag-blue { background: #E0F2FE; color: #0369A1; }
+    .pt-tag-green { background: #DCFCE7; color: #15803D; }
+    .pt-tag-amber { background: #FEF3C7; color: #B45309; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      background: var(--surface);
+    }
+
+    @media (max-width: 900px) {
+      .pt-doc-sidebar {
+        display: none;
+      }
+      .pt-doc-main {
+        padding: 1.5rem 1rem;
+      }
+    }
+
+    /* Let existing header items wrap only when narrow screens need it. */
+    @media (max-width: 560px) {
+      .pt-top-header, .pt-brand-wrap, .pt-nav-actions { flex-wrap: wrap; }
+      .pt-brand-wrap { min-width: 0; }
+    }
+
+    @media print {
+      .pt-top-header, .pt-doc-sidebar, footer {
+        display: none !important;
+      }
+      .pt-doc-main {
+        padding: 0;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="pt-top-header">
+    <a href="index.html" class="pt-brand-wrap">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="8" fill="#0284C7"/>
+        <path d="M9 16L14 21L23 11" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="pt-brand-title">PayTrack</span>
+      <span class="pt-badge-doc">Documentation</span>
+    </a>
+    <div class="pt-nav-actions">
+      <button data-print class="pt-btn pt-btn-outline">🖨️ پرنٹ / PDF</button>
+      <a href="index.html" class="pt-btn pt-btn-primary">لینڈنگ پیج پر جائیں ←</a>
+    </div>
+  </header>
+
+  <div class="pt-doc-layout">
+
+    <aside class="pt-doc-sidebar">
+      <div class="pt-sidebar-section-title">فہرستِ مضامین (Table of Contents)</div>
+      <ul class="pt-sidebar-nav">
+        <li><a href="#overview">1. ایپ کا جامع تعارف</a></li>
+        <li><a href="#comparison">2. روایتی ایپس سے موازنہ</a></li>
+        <li><a href="#dashboard">3.1. ہوم اسکرین اور ڈیش بورڈ</a></li>
+        <li><a href="#profiles">3.2. پروفائل کیٹیگریز</a></li>
+        <li><a href="#bills-tracker" style="color:var(--primary); font-weight:600;">3.2.3. یوٹیلیٹی بلز ٹریکر (#bills-tracker)</a></li>
+        <li><a href="#transaction-types">3.3. ٹرانزیکشن کی 5 اقسام</a></li>
+        <li><a href="#payment-methods">3.4. ادائیگی کے طریقے</a></li>
+        <li><a href="#history-ledger">3.5. ہسٹری اور لیجر</a></li>
+        <li><a href="#backup-export">3.6. بیک اپ اور ایکسل برآمد</a></li>
+        <li><a href="#pro-trial">3.7. پرو اور ٹرائل مینیجمنٹ</a></li>
+        <li><a href="#step-by-step">4. مرحلہ وار گائیڈ</a></li>
+        <li><a href="#technical-spec">5. تکنیکی خصوصیات</a></li>
+        <li><a href="#support">6. رابطہ اور سپورٹ</a></li>
+      </ul>
+    </aside>
+
+    <main class="pt-doc-main">
+
+      <div class="pt-doc-hero" id="overview">
+        <h1>PayTrack — مکمل موبائل ایپ گائیڈ اور آفیشل ڈاکومنٹیشن</h1>
+        <p>Your payments, on track — 100% آف لائن، پرائیویٹ اور محفوظ پرسنل کھاتہ اور بل مینیجر۔</p>
+        <div class="pt-doc-meta">
+          <span>📦 <strong>پیکج:</strong> com.paytrack.app</span>
+          <span>⚡ <strong>ورژن:</strong> 1.0.0 (پرو / ٹرائل سپورٹڈ)</span>
+          <span>📱 <strong>پلیٹ فارمز:</strong> Android, iOS PWA, Web</span>
+          <span>🔒 <strong>آف لائن:</strong> 100% Zero Internet Dependency</span>
+        </div>
+      </div>
+
+      <section>
+        <h2>1. ایپ کا جامع تجزیہ اور فلسفہ (Executive Summary)</h2>
+        <p><strong>PayTrack</strong> ایک جدید، تیز رفتار اور پرسنل فنانس / ادھار کھاتہ (Debt & Payment Manager) موبائل ایپلی کیشن ہے۔ اسے خاص طور پر اس انداز میں تیار کیا گیا ہے کہ ایک عام دکاندار، تاجر، فری لانسر، یا عام گھریلو صارف اپنے تمام لین دین، ادھار وصولیوں، ادائیگیوں اور یوٹیلیٹی بلوں کا مکمل اور درست حساب کتاب بغیر کسی الجھن کے رکھ سکے۔</p>
+
+        <div class="pt-grid-2">
+          <div class="pt-card">
+            <h4>⚡ 100% آف لائن (Zero Cloud Tracking)</h4>
+            <p>ایپ کو چلانے کے لیے انٹرنیٹ یا وائی فائی کی بالکل ضرورت نہیں۔ سارا ڈیٹا صارف کے اپنے موبائل کے اندر لوکل ڈیٹا بیس (IndexedDB) میں مکمل انکرپٹڈ محفوظ رہتا ہے۔</p>
+          </div>
+          <div class="pt-card">
+            <h4>🎯 2 کلکس اور 3 سیکنڈز میں انٹری</h4>
+            <p>نہ کوئی لاگ ان کا جھنجھٹ، نہ OTP کا انتظار، اور نہ ہی کوئی اشتہارات۔ ایپ فوری کھلتی ہے اور لمحوں میں ادائیگی کا اندراج ہو جاتا ہے۔</p>
+          </div>
+          <div class="pt-card">
+            <h4>⚖️ سو فیصد درست ریاضی (Zero Math Error)</h4>
+            <p>تمام تر حساب کتاب انٹیجر پیسہ میتھامیٹکس (1 PKR = 100 Paisa) پر کام کرتا ہے جس کی بدولت اعشاریہ کا کوئی نقص نہیں آتا۔</p>
+          </div>
+          <div class="pt-card">
+            <h4>📊 شفاف الگ الگ بیلنس</h4>
+            <p>دینا (Payable) اور لینا (Receivable) کبھی ایک دوسرے سے گھٹا کر گمراہ کن نیٹ بیلنس نہیں دکھایا جاتا، بلکہ دونوں رقوم الگ الگ نمایاں رہتی ہیں۔</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="comparison">
+        <h2>2. دیگر روایتی ایپس کے مقابلے میں پے ٹریک مختلف اور بہتر کیوں ہے؟</h2>
+        <div class="pt-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>خصوصیت / فیچر</th>
+                <th>پے ٹریک (PayTrack)</th>
+                <th>روایتی کھاتہ ایپس (DigiKhata وغیرہ)</th>
+                <th>روایتی کاپی یا رجسٹر</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>انٹرنیٹ کی ضرورت</strong></td>
+                <td><span class="pt-tag pt-tag-green">100% آف لائن</span> مکمل کام کرتی ہے</td>
+                <td>ہر وقت انٹرنیٹ ضروری، سگنل نہ ہوں تو بند</td>
+                <td>انٹرنیٹ نہیں چاہیے</td>
+              </tr>
+              <tr>
+                <td><strong>اسپیڈ اور وقت کی بچت</strong></td>
+                <td><span class="pt-tag pt-tag-blue">الٹرا فاسٹ:</span> فوری اوپن، 3 سیکنڈ انٹری</td>
+                <td>لاگ ان اور لوڈنگ اسکرینز کے باعث سست</td>
+                <td>دستی لکھنے اور صفحے ڈھونڈنے میں وقت ضائع</td>
+              </tr>
+              <tr>
+                <td><strong>اشتہارات اور دخل اندازی</strong></td>
+                <td><span class="pt-tag pt-tag-green">صفر اشتہار (Zero Ads)</span></td>
+                <td>ویڈیو اور بینر اشتہارات کی بھرمار</td>
+                <td>کوئی اشتہار نہیں</td>
+              </tr>
+              <tr>
+                <td><strong>ڈیٹا پرائیویسی اور سیکیورٹی</strong></td>
+                <td><span class="pt-tag pt-tag-green">100% محفوظ:</span> ڈیٹا صرف آپ کے فون میں</td>
+                <td>کمپنیوں کے ریموٹ سرورز پر ڈیٹا اسٹور ہوتا ہے</td>
+                <td>کاپی چوری یا ضائع ہونے کا اندیشہ</td>
+              </tr>
+              <tr>
+                <td><strong>بل مینیجمنٹ (Bills Tracker)</strong></td>
+                <td><span class="pt-tag pt-tag-blue">مکمل یوٹیلیٹی بل ٹریکر</span> بل قسطوں میں ادا کریں</td>
+                <td>بلوں کا کوئی باقاعدہ نظام نہیں</td>
+                <td>الگ الگ رسیدیں سنبھالنی پڑتی ہیں</td>
+              </tr>
+              <tr>
+                <td><strong>بیک اپ اور ایکسل ایکسپورٹ</strong></td>
+                <td><span class="pt-tag pt-tag-green">JSON اور CSV ایکسل</span> مفت اور لامحدود</td>
+                <td>کلاؤڈ پر محدود یا پی ڈی ایف کی فیس</td>
+                <td>بیک اپ ناممکن</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="dashboard">
+        <h2>3.1. ہوم اسکرین اور ڈیش بورڈ (Payment Overview)</h2>
+        <p>ہوم اسکرین صارف کو ایک ہی نظر میں مالی صورتحال کا مکمل اور شفاف جائزہ پیش کرتی ہے:</p>
+        <ul>
+          <li><strong>You Have to Pay (آپ نے دینے ہیں):</strong> تمام افراد، دکانوں اور بلوں کی کل رقم جو آپ کے ذمے واجب الادا ہے۔ یہ کارڈ واضح ایمبر/اورنج رنگ میں نظر آتا ہے۔</li>
+          <li><strong>You Have to Receive (آپ نے لینے ہیں):</strong> تمام دوستوں، گاہکوں اور پارٹنرز سے وصول کی جانے والی کل رقم کا میزان نیلے رنگ میں دکھایا جاتا ہے۔</li>
+          <li><strong>کیٹیگری کاؤنٹرز:</strong> Persons، Shops اور Bills کے ایکٹو اکاؤنٹس کی تعداد فوری ظاہر ہوتی ہے۔</li>
+          <li><strong>کوئیک ایکشن شارٹ کٹس:</strong> Give Payment، Receive Payment، اور Add Profile کے براہ راست بٹنز۔</li>
+        </ul>
+      </section>
+
+      <section id="profiles">
+        <h2>3.2. پروفائل کیٹیگریز (3 Profile Categories)</h2>
+        <div class="pt-grid-2">
+          <div class="pt-card">
+            <h4>👤 افراد (Person Profiles)</h4>
+            <p>دوست احباب، کسٹمرز، رشتہ دار یا ملازمین۔ ان کا دینا اور لینا دونوں ایک ساتھ یا الگ الگ واضح نظر آتا ہے۔</p>
+          </div>
+          <div class="pt-card">
+            <h4>🏪 دکانیں / وینڈرز (Shop Profiles)</h4>
+            <p>محلے کی دکان، کریانہ اسٹور، ہول سیلر یا فیکٹری۔ خریدا گیا ادھار مال، دیا گیا ایڈوانس اور واجب الادا رقم کا تفصیلی کھاتہ۔</p>
+          </div>
+        </div>
+
+        <div id="bills-tracker" class="pt-card" style="border: 2px solid var(--primary); background: #F0F9FF; margin-top: 1.5rem;">
+          <h3 style="color: var(--primary-dark); margin-top: 0;">⚡ یوٹیلیٹی بلز ٹریکر (Bills Tracker System)</h3>
+          <p>بجلی (WAPDA/K-Electric)، سوئی گیس، انٹرنیٹ کا بل، مکان یا دکان کا کرایہ سنبھالنے کا خصوصی ماڈیول:</p>
+          <ul>
+            <li><strong>بل کی کل رقم اور ریفرنس نمبر:</strong> بجلی یا گیس کے بل کا کنزیومر نمبر اور کل رقم درج کریں۔</li>
+            <li><strong>آخری تاریخ (Due Date Alert):</strong> بل ادا کرنے کی آخری تاریخ یاد رکھنے کا نظام۔</li>
+            <li><strong>پارشل ادائیگی (قسطوں میں ادائی):</strong> اگر بل 10,000 ہے اور آپ نے 4,000 ادا کیا تو ایپ خود بتا دے گی کہ 6,000 باقی ہے۔</li>
+            <li><strong>آٹومیٹک اسٹیٹس بیجز:</strong> 
+              <span class="pt-tag pt-tag-amber">Unpaid</span> غیر ادا شدہ، 
+              <span class="pt-tag pt-tag-blue">Partially Paid</span> جزوی ادا شدہ، 
+              <span class="pt-tag pt-tag-green">Paid</span> مکمل ادا شدہ۔
+            </li>
+            <li><strong>زیادہ ادائیگی کا الرٹ (Excess Warning):</strong> اگر بل کا بقایا 5,000 روپے ہے اور غلطی سے آپ 6,000 روپے درج کرنے لگیں، تو ایپ فوری وارننگ دیتی ہے تاکہ غلطی نہ ہو۔</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="transaction-types">
+        <h2>3.3. ٹرانزیکشن کی 5 بنیادی اقسام (Transaction Types)</h2>
+        <div class="pt-card">
+          <ol style="margin-right: 1.5rem; line-height: 2;">
+            <li><strong>Give Payment (ادا کی):</strong> اپنی جیب سے نقد یا آن لائن ادائیگی کرنا، جس سے آپ پر ادھار یا بل کم ہو جاتا ہے۔</li>
+            <li><strong>Receive Payment (وصول کی):</strong> دوسرے شخص یا گاہک سے پیسے وصول کرنا۔</li>
+            <li><strong>Add Due / New Credit (نیا ادھار چڑھا دیا):</strong> جب کیش کا تبادلہ نہ ہو مگر ادھار چڑھا دیا جائے (جیسے دکان سے ادھار سامان لیا)۔</li>
+            <li><strong>Opening Balance (ابتدائی بقایا):</strong> کھاتہ شروع کرتے وقت پرانا باقی ماندہ حساب کتاب درج کرنا۔</li>
+            <li><strong>Adjustment (درستگی):</strong> اگر حساب میں کوئی بھول چوک ہو جائے تو وضاحت کے ساتھ تصحیح کرنا۔</li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="payment-methods">
+        <h2>3.4. ادائیگی کے طریقے (Payment Methods)</h2>
+        <p>ہر لین دین میں پیمنٹ موڈ ریکارڈ کیا جا سکتا ہے:</p>
+        <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-top:0.75rem;">
+          <span class="pt-tag pt-tag-green">💵 Cash (نقد)</span>
+          <span class="pt-tag pt-tag-blue">🏦 Bank Transfer (بینک)</span>
+          <span class="pt-tag pt-tag-green">📱 Easypaisa (ایزی پیسہ)</span>
+          <span class="pt-tag pt-tag-amber">⚡ JazzCash (جاز کیش)</span>
+          <span class="pt-tag">🔄 Other (دیگر)</span>
+        </div>
+      </section>
+
+      <section id="history-ledger">
+        <h2>3.5. ہسٹری اور لیجر (Full History & Profile Ledger)</h2>
+        <ul>
+          <li><strong>مکمل تاریخ وار ریکارڈ:</strong> تمام ٹرانزیکشنز نئے سے پرانے کی ترتیب میں فلٹر اور سرچ کے ساتھ دستیاب۔</li>
+          <li><strong>کیٹیگری اور تاریخ کے فلٹرز:</strong> کسی مخصوص دن یا شخص کے کھاتے کو الگ کر کے دیکھیں۔</li>
+          <li><strong>پروفائل اسٹیٹمنٹ:</strong> کسی بھی شخص کے نام پر کلک کریں اور اس کا مکمل لیجر رسید کی شکل میں حاصل کریں۔</li>
+        </ul>
+      </section>
+
+      <section id="backup-export">
+        <h2>3.6. ڈیٹا کا تحفظ، بیک اپ اور ایکسل برآمد</h2>
+        <div class="pt-callout pt-callout-info">
+          <strong>💾 مکمل خود مختاری:</strong> پے ٹریک میں آپ کے ڈیٹا کا مالک صرف آپ ہیں۔ سیٹنگز میں جا کر صرف ایک بٹن دبا کر پورا کھاتہ <code>.json</code> بیک اپ میں محفوظ کر سکتے ہیں یا <code>.csv</code> ایکسل شیٹ میں کنورٹ کر سکتے ہیں۔
+        </div>
+      </section>
+
+      <section id="pro-trial">
+        <h2>3.7. پرو ورژن اور ٹرائل پروٹیکشن سسٹم</h2>
+        <p>ایپ انسٹال ہونے کے بعد 3 دن تک تمام فیچرز کے ساتھ مفت کام کرتی ہے۔ ٹرائل ختم ہونے پر واٹس ایپ کے ذریعے لائف ٹائم پرو ورژن حاصل کیا جا سکتا ہے۔ حتیٰ کہ ٹرائل کے بعد بھی صارف کا ڈیٹا 100% محفوظ رہتا ہے اور وہ اپنا ایکسل بیک اپ مفت نکال سکتا ہے۔</p>
+      </section>
+
+      <section id="step-by-step">
+        <h2>4. ایپ استعمال کرنے کا مرحلہ وار طریقہ (Step-by-Step Guide)</h2>
+        <ol class="pt-steps-list">
+          <li class="pt-step-item">
+            <h4>نیا کھاتہ شامل کریں (Add Profile)</h4>
+            <p>Profiles پر جائیں، کیٹیگری (Person, Shop, Bill) منتخب کریں، نام اور موبائل درج کریں اور Save دبائیں۔</p>
+          </li>
+          <li class="pt-step-item">
+            <h4>لین دین کا فوری اندراج کریں (Quick Transaction)</h4>
+            <p>ہوم اسکرین کے (+) بٹن کو دبائیں، شخص منتخب کریں، رقم درج کریں اور 3 سیکنڈ میں ٹرانزیکشن محفوظ کریں۔</p>
+          </li>
+          <li class="pt-step-item">
+            <h4>یوٹیلیٹی بلز کو ٹریک اور پے کریں</h4>
+            <p>بل منتخب کریں، Pay Bill دبائیں اور جزوی یا مکمل رقم ادا کر کے اسٹیٹس اپڈیٹ کریں۔</p>
+          </li>
+          <li class="pt-step-item">
+            <h4>بیک اپ اور ایکسل فائل محفوظ کریں</h4>
+            <p>Settings میں جائیں اور Export JSON یا Export CSV دبا کر اپنے ریکارڈ کی کاپی محفوظ رکھیں۔</p>
+          </li>
+        </ol>
+      </section>
+
+      <section id="technical-spec">
+        <h2>5. تکنیکی خصوصیات (Technical Specifications)</h2>
+        <div class="pt-card">
+          <ul style="margin-right: 1.5rem; line-height: 2;">
+            <li><strong>Frontend Stack:</strong> React 18, TypeScript, Tailwind CSS</li>
+            <li><strong>Native Container:</strong> Capacitor 8 (Android & iOS Bridge)</li>
+            <li><strong>Database:</strong> IndexedDB بذریعہ <code>idb</code> لائبریری (تیز ترین لوکل اسٹوریج)</li>
+            <li><strong>Mathematical Engine:</strong> 100% Integer Paisa Arithmetic (No Floating-point inaccuracies)</li>
+            <li><strong>Landing Showcase:</strong> Three.js Procedural 3D Phone, GSAP, Lenis Smooth Scroll</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="support">
+        <h2>6. رابطہ اور سپورٹ (Contact & Support)</h2>
+        <div class="pt-card" style="text-align: center; padding: 2rem;">
+          <h3 style="color: var(--primary); margin-top: 0;">ڈویلپر سے براہ راست رابطہ</h3>
+          <p>کسی بھی تکنیکی سوال، پرو ورژن لائسنس یا فیچر درخواست کے لیے:</p>
+          <p style="font-size: 1.2rem; font-weight: 700; color: #16A34A; direction: ltr; margin: 1rem 0;">
+            WhatsApp: +92 326 0735090
+          </p>
+          <a href="https://wa.me/923260735090?text=Hello%20Rehan,%20I%20want%20to%20get%20PayTrack%20Unlimited%20Version." target="_blank" class="pt-btn pt-btn-primary" style="padding: 0.75rem 1.75rem; font-size: 1rem;" rel="noopener noreferrer">
+            💬 واٹس ایپ پر چیٹ شروع کریں
+          </a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>
+    <p>© 2026 PayTrack. تمام حقوق بحق ریحان ایاز محفوظ ہیں۔</p>
+  </footer>
+
+  <script src="assets/docs-navigation.js"></script>
+</body>
+</html>
+

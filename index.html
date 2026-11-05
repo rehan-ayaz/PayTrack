@@ -3,22 +3,24 @@
   <head>
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#03045E">
+    <meta property="og:url" content="https://paytrack.rehanayaz.com/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="PayTrack">
     <meta property="og:title" content="PayTrack — 100% Offline Personal Khata & Payment Tracker">
     <meta property="og:description" content="Fast, private, 100% offline personal khata, debt manager and utility bill tracker. Exact integer paisa arithmetic with separated balances.">
-    <meta property="og:image" content="assets/thumbnail.png">
+    <meta property="og:image" content="https://paytrack.rehanayaz.com/assets/thumbnail.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="PayTrack — 100% Offline Personal Khata & Payment Tracker">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="PayTrack — 100% Offline Personal Khata & Payment Tracker">
     <meta name="twitter:description" content="Fast, private, 100% offline personal khata, debt manager and utility bill tracker. Exact integer paisa arithmetic with separated balances.">
-    <meta name="twitter:image" content="assets/thumbnail.png">
+    <meta name="twitter:image" content="https://paytrack.rehanayaz.com/assets/thumbnail.png">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" href="/icons/icon-192.png">
-    <link rel="canonical" href="https://paytrack.app/">
+    <link rel="canonical" href="https://paytrack.rehanayaz.com/">
     <title>PayTrack: Offline Personal Khata & Payment Tracker</title>
     <meta name="description" content="PayTrack manages your daily khata, merchant dues and utility bills 100% offline. Zero internet required, separated balances, exact integer paisa arithmetic.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,21 +28,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="preload" href="assets/fonts/gabarito-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <script data-cfasync="false">document.documentElement.classList.add('has-js')</script>
-    <script data-cfasync="false">(function () {
-            try {
-                if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-                var c = document.createElement('canvas');
-                var gl = c.getContext('webgl2');
-                if (!gl) return;
-                var lose = gl.getExtension('WEBGL_lose_context');
-                if (lose) lose.loseContext();
-                document.documentElement.classList.add('gl');
-            } catch (e) {}
-        })();</script>
+    <script data-cfasync="false" src="assets/page-init.js"></script>
+    <script data-cfasync="false" src="assets/webgl-detect.js"></script>
     <link rel="stylesheet" href="assets/style.css">
     <link rel="preload" href="assets/vendor/three.global.min.js" as="script">
     <link rel="preload" href="assets/script.js" as="script">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "PayTrack",
+  "url": "https://paytrack.rehanayaz.com/",
+  "description": "Offline personal khata, debt manager and utility bill tracker."
+}
+    </script>
   </head>
   <body id="top">
 
@@ -59,29 +60,30 @@
         <path d="M10 1.6l2.5 5.3 5.7.7-4.2 4 1.1 5.8L10 14.5l-5.1 2.9L6 11.6 1.8 7.6l5.7-.7z"/>
       </symbol>
     </svg>
-    <a class="skip-link" href="#features">
-      Skip to the features
+    <a class="pt-skip-link" href="#main">
+      Skip to the main content
     </a>
 
     <!-- ====================================================================== -->
     <!-- NAVIGATION HEADER                                                      -->
     <!-- ====================================================================== -->
-    <header class="nav" data-section="nav">
-      <a class="brand-lockup" href="#top" aria-label="PayTrack, back to the top">
-        <svg class="brand-mark" aria-hidden="true">
+    <header class="pt-nav" data-section="nav">
+      <a class="pt-brand-lockup" href="#top" aria-label="PayTrack, back to the top">
+        <svg class="pt-brand-mark" aria-hidden="true">
           <use href="#mark"/>
         </svg>
         <span>PayTrack</span>
       </a>
       <nav aria-label="Main">
-        <ul class="nav-links">
+        <ul class="pt-nav-links">
           <li><a href="#features" data-nav-optional>Features</a></li>
           <li><a href="#how" data-nav-optional>How it works</a></li>
           <li><a href="#pricing" data-nav-optional>Pricing</a></li>
           <li><a href="#faq" data-nav-optional>FAQ</a></li>
+          <li><a href="docs.html" data-nav-optional>Docs</a></li>
         </ul>
       </nav>
-      <a class="btn btn--brand btn--small" href="https://wa.me/923260735090?text=Hello%20Rehan,%20I%20want%20to%20buy%20PayTrack%20Unlimited%20license." target="_blank" rel="noopener noreferrer">
+      <a class="pt-btn pt-btn-brand pt-btn-small" href="https://wa.me/923260735090?text=Hello%20Rehan,%20I%20want%20to%20buy%20PayTrack%20Unlimited%20license." target="_blank" rel="noopener noreferrer">
         Buy Now
       </a>
     </header>
@@ -92,51 +94,51 @@
     <main id="main">
 
       <!-- ====================================================================== -->
-      <!-- HERO SECTION
+      <!-- HERO SECTION -->
       <!-- ====================================================================== -->
-      <section class="hero" data-section="hero" data-hero aria-labelledby="hero-title">
-        <div class="wrap">
-          <h1 class="hero-title" id="hero-title" data-hero-title>
-            <span class="t-line">Track every debt.</span>
-            <span class="t-line">Zero cloud lag.</span>
+      <section class="pt-hero" data-section="hero" data-hero aria-labelledby="hero-title">
+        <div class="pt-wrap">
+          <h1 class="pt-hero-title" id="hero-title" data-hero-title>
+            <span class="pt-t-line">Track every debt.</span>
+            <span class="pt-t-line">Zero cloud lag.</span>
           </h1>
-          <div class="hero-stage">
-            <div class="hero-copy" data-hero-fade>
-              <p class="hero-sub">
+          <div class="pt-hero-stage">
+            <div class="pt-hero-copy" data-hero-fade>
+              <p class="pt-hero-sub">
                 PayTrack manages your daily khata, merchant credit and utility bills completely on device, keeping exact track of what you owe and what you receive.
               </p>
-              <div class="store-row">
-                <a class="store-btn store-btn--trial" href="#pricing">
+              <div class="pt-store-row">
+                <a class="pt-store-btn pt-store-btn-trial" href="assets/downloads/paytrack-free.apk" download="PayTrack-Free.apk">
                   Start Free Trial
                 </a>
-                <a class="store-btn store-btn--whatsapp" href="https://wa.me/923260735090?text=Hello%20Rehan,%20I%20want%20to%20buy%20PayTrack%20Unlimited%20license." target="_blank" rel="noopener noreferrer">
+                <a class="pt-store-btn pt-store-btn-whatsapp" href="https://wa.me/923260735090?text=Hello%20Rehan,%20I%20want%20to%20buy%20PayTrack%20Unlimited%20license." target="_blank" rel="noopener noreferrer">
                   Buy Now
                 </a>
               </div>
-              <p class="hero-note">100% offline & local. Exact integer paisa arithmetic.</p>
+              <p class="pt-hero-note">100% offline & local. Exact integer paisa arithmetic.</p>
             </div>
-            <div class="hero-device" data-phone-slot="hero" data-tilt="-0.2">
-              <figure class="shot-frame">
+            <div class="pt-hero-device" data-phone-slot="hero" data-tilt="-0.2">
+              <figure class="pt-shot-frame">
                 <img src="assets/images/screen-hero.webp" fetchpriority="high" alt="The PayTrack home screen: live balances overview, separated pay and receive totals, and quick activity." width="718" height="1556" data-screen data-tone="dark">
               </figure>
             </div>
-            <div class="hero-chips" aria-hidden="true">
-              <div class="chip" data-hero-chip>
-                <span class="chip-dot" data-tone="mint">S</span>
+            <div class="pt-hero-chips" aria-hidden="true">
+              <div class="pt-chip" data-hero-chip>
+                <span class="pt-chip-dot" data-tone="mint">S</span>
                 <div>
                   <b>Hamad paid dues</b>
                   <span>Payment Given · Rs. 7,020</span>
                 </div>
               </div>
-              <div class="chip" data-hero-chip>
-                <span class="chip-dot" data-tone="sun">✓</span>
+              <div class="pt-chip" data-hero-chip>
+                <span class="pt-chip-dot" data-tone="sun">✓</span>
                 <div>
                   <b>Balances settled</b>
                   <span>Exact integer paisa math</span>
                 </div>
               </div>
-              <div class="chip chip--ink" data-hero-chip>
-                <span class="chip-dot" data-tone="brand">4.8</span>
+              <div class="pt-chip pt-chip-ink" data-hero-chip>
+                <span class="pt-chip-dot" data-tone="brand">4.9</span>
                 <div>
                   <b>100% Offline & Safe</b>
                   <span>Zero cloud tracking</span>
@@ -148,39 +150,39 @@
       </section>
 
       <!-- ====================================================================== -->
-      <!-- FEATURES STORY (3D Interactive Phone)
+      <!-- FEATURES STORY (3D Interactive Phone) -->
       <!-- ====================================================================== -->
-      <section class="story" data-section="story" data-story data-spin="360" id="features" aria-labelledby="story-title">
-        <h2 class="sr-only" id="story-title">What PayTrack does</h2>
-        <div class="story-stage" data-story-stage>
-          <nav class="story-rail" data-story-rail aria-label="Feature steps">
+      <section class="pt-story" data-section="story" data-story data-spin="360" id="features" aria-labelledby="story-title">
+        <h2 class="pt-sr-only" id="story-title">What PayTrack does</h2>
+        <div class="pt-story-stage" data-story-stage>
+          <nav class="pt-story-rail" data-story-rail aria-label="Feature steps">
           </nav>
-          <div class="step" data-step data-tone="sun">
-            <div class="step-copy" data-step-copy>
-              <p class="step-num"><b class="step-count" aria-hidden="true"></b><span data-step-label>Ledger</span></p>
-              <h3 class="display h3">Every balance, separated clearly.</h3>
+          <div class="pt-step" data-step data-tone="sun">
+            <div class="pt-step-copy" data-step-copy>
+              <p class="pt-step-num"><b class="pt-step-count" aria-hidden="true"></b><span data-step-label>Ledger</span></p>
+              <h3 class="pt-display pt-h3">Every balance, separated clearly.</h3>
               <p>
                 Track what you have to pay and what you have to receive without confusing net totals. Everything updates instantly on your local device with zero delay.
               </p>
-              <ul class="step-points">
+              <ul class="pt-step-points">
                 <li>Separated payable and receivable totals</li>
                 <li>Instant local computation with zero lag</li>
                 <li>No internet or phone login ever needed</li>
               </ul>
             </div>
-            <figure class="shot-frame">
+            <figure class="pt-shot-frame">
               <img src="assets/images/screen-balances.webp" fetchpriority="low" alt="The PayTrack Profile Ledger: Hamad Raza detailed balance of Rs. 7,020 with itemized payment history." width="718" height="1556" data-screen data-tone="dark">
             </figure>
-            <div class="step-aside" data-step-aside aria-hidden="true">
-              <div class="chip">
-                <span class="chip-dot" data-tone="sun">÷3</span>
+            <div class="pt-step-aside" data-step-aside aria-hidden="true">
+              <div class="pt-chip">
+                <span class="pt-chip-dot" data-tone="sun">÷3</span>
                 <div>
                   <b>You Have to Pay</b>
                   <span>Rs. 7,020 outstanding</span>
                 </div>
               </div>
-              <div class="chip">
-                <span class="chip-dot" data-tone="mint">✓</span>
+              <div class="pt-chip">
+                <span class="pt-chip-dot" data-tone="mint">✓</span>
                 <div>
                   <b>Payment logged</b>
                   <span>Hamad Raza · just now</span>
@@ -188,32 +190,32 @@
               </div>
             </div>
           </div>
-          <div class="step" data-step data-tone="mint">
-            <div class="step-copy" data-step-copy>
-              <p class="step-num"><b class="step-count" aria-hidden="true"></b><span data-step-label>Profiles</span></p>
-              <h3 class="display h3">Profiles for persons, shops & bills.</h3>
+          <div class="pt-step" data-step data-tone="mint">
+            <div class="pt-step-copy" data-step-copy>
+              <p class="pt-step-num"><b class="pt-step-count" aria-hidden="true"></b><span data-step-label>Profiles</span></p>
+              <h3 class="pt-display pt-h3">Profiles for persons, shops & bills.</h3>
               <p>
                 Keep separate records for friends, wholesale vendors, and monthly utility expenses. Instant categorization keeps your financial accounts clean and audit-ready.
               </p>
-              <ul class="step-points">
+              <ul class="pt-step-points">
                 <li>Dedicated Person, Shop, and Utility Bill groups</li>
                 <li>Instant search across names and ledger notes</li>
                 <li>Full itemized transaction history for each entity</li>
               </ul>
             </div>
-            <figure class="shot-frame">
+            <figure class="pt-shot-frame">
               <img src="assets/images/screen-profiles.webp" fetchpriority="low" alt="The Profiles Directory screen: manage persons, shops and utility bills with live count badges." width="718" height="1556" data-screen data-tone="dark">
             </figure>
-            <div class="step-aside" data-step-aside aria-hidden="true">
-              <div class="chip">
-                <span class="chip-dot" data-tone="mint">£</span>
+            <div class="pt-step-aside" data-step-aside aria-hidden="true">
+              <div class="pt-chip">
+                <span class="pt-chip-dot" data-tone="mint">£</span>
                 <div>
                   <b>Hamad Raza (Person)</b>
                   <span>Rs. 7,020 due balance</span>
                 </div>
               </div>
-              <div class="chip">
-                <span class="chip-dot" data-tone="sun">!</span>
+              <div class="pt-chip">
+                <span class="pt-chip-dot" data-tone="sun">!</span>
                 <div>
                   <b>Utility Bills status</b>
                   <span>Electricity & gas tracked</span>
@@ -221,32 +223,32 @@
               </div>
             </div>
           </div>
-          <div class="step" data-step data-tone="sky">
-            <div class="step-copy" data-step-copy>
-              <p class="step-num"><b class="step-count" aria-hidden="true"></b><span data-step-label>Actions</span></p>
-              <h3 class="display h3">Record payments in two fast taps.</h3>
+          <div class="pt-step" data-step data-tone="sky">
+            <div class="pt-step-copy" data-step-copy>
+              <p class="pt-step-num"><b class="pt-step-count" aria-hidden="true"></b><span data-step-label>Actions</span></p>
+              <h3 class="pt-display pt-h3">Record payments in two fast taps.</h3>
               <p>
                 When cash moves, log it in under 3 seconds. Select Give, Receive, or Add Due, enter the rupee amount, and your balances update automatically.
               </p>
-              <ul class="step-points">
+              <ul class="pt-step-points">
                 <li>Direct Give Payment and Receive Payment</li>
                 <li>Automatic ISO timestamping and audit notes</li>
                 <li>Cash, Bank, Easypaisa & JazzCash modes</li>
               </ul>
             </div>
-            <figure class="shot-frame">
+            <figure class="pt-shot-frame">
               <img src="assets/images/screen-record.webp" fetchpriority="low" alt="The Quick Action modal: record give or receive payments in under 3 seconds." width="718" height="1556" data-screen data-tone="dark">
             </figure>
-            <div class="step-aside" data-step-aside aria-hidden="true">
-              <div class="chip">
-                <span class="chip-dot" data-tone="sky">S</span>
+            <div class="pt-step-aside" data-step-aside aria-hidden="true">
+              <div class="pt-chip">
+                <span class="pt-chip-dot" data-tone="sky">S</span>
                 <div>
                   <b>Give Payment recorded</b>
                   <span>Cash · Oct 20, 09:54 AM</span>
                 </div>
               </div>
-              <div class="chip">
-                <span class="chip-dot" data-tone="mint">✓</span>
+              <div class="pt-chip">
+                <span class="pt-chip-dot" data-tone="mint">✓</span>
                 <div>
                   <b>Rs. 5,000 paid</b>
                   <span>Hamad Raza · 2 min ago</span>
@@ -254,25 +256,25 @@
               </div>
             </div>
           </div>
-          <div class="step" data-step data-tone="brand">
-            <div class="step-copy" data-step-copy>
-              <p class="step-num"><b class="step-count" aria-hidden="true"></b><span data-step-label>Export</span></p>
-              <h3 class="display h3">Audit logs & instant CSV export.</h3>
+          <div class="pt-step" data-step data-tone="brand">
+            <div class="pt-step-copy" data-step-copy>
+              <p class="pt-step-num"><b class="pt-step-count" aria-hidden="true"></b><span data-step-label>Export</span></p>
+              <h3 class="pt-display pt-h3">Audit logs & instant CSV export.</h3>
               <p>
                 Never lose a single rupee of financial history. Search past entries by date or category, and export clean Excel-ready CSV files whenever needed.
               </p>
-              <ul class="step-points">
+              <ul class="pt-step-points">
                 <li>Full chronological audit trail sorted newest first</li>
                 <li>1-click CSV download for Microsoft Excel</li>
-                <li>Encrypted local JSON database backup</li>
+                <li>Secure local JSON database backup & restore</li>
               </ul>
             </div>
-            <figure class="shot-frame">
+            <figure class="pt-shot-frame">
               <img src="assets/images/screen-audit.webp" fetchpriority="low" alt="The Transaction History screen: complete chronological ledger with search and CSV export." width="718" height="1556" data-screen data-tone="dark">
             </figure>
-            <div class="step-aside" data-step-aside aria-hidden="true">
-              <div class="chip">
-                <span class="chip-dot" data-tone="brand">
+            <div class="pt-step-aside" data-step-aside aria-hidden="true">
+              <div class="pt-chip">
+                <span class="pt-chip-dot" data-tone="brand">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 20h16"/>
                   </svg>
@@ -282,8 +284,8 @@
                   <span>Open in Microsoft Excel</span>
                 </div>
               </div>
-              <div class="chip">
-                <span class="chip-dot" data-tone="sun">+</span>
+              <div class="pt-chip">
+                <span class="pt-chip-dot" data-tone="sun">+</span>
                 <div>
                   <b>3 transactions logged</b>
                   <span>Full history saved locally</span>
@@ -291,80 +293,80 @@
               </div>
             </div>
           </div>
-          <div class="phone-slot" data-phone-slot="story" aria-hidden="true">
+          <div class="pt-phone-slot" data-phone-slot="story" aria-hidden="true">
           </div>
         </div>
       </section>
 
       <!-- ====================================================================== -->
-      <!-- HOW IT WORKS (Interactive Calculation Demo)
+      <!-- HOW IT WORKS (Interactive Calculation Demo) -->
       <!-- ====================================================================== -->
-      <section class="section how" data-section="how" data-how id="how" aria-labelledby="how-title">
-        <div class="wrap">
-          <div class="section-head" data-reveal>
-            <p class="kicker">How it works</p>
-            <h2 class="display h2" id="how-title">Set up in seconds. Sorted for good.</h2>
-            <p class="lede">
+      <section class="pt-section pt-how" data-section="how" data-how id="how" aria-labelledby="how-title">
+        <div class="pt-wrap">
+          <div class="pt-section-head" data-reveal>
+            <p class="pt-kicker">How it works</p>
+            <h2 class="pt-display pt-h2" id="how-title">Set up in seconds. Sorted for good.</h2>
+            <p class="pt-lede">
               No account registration, no internet, no cloud lag. Three simple steps and your accounts run themselves.
             </p>
           </div>
-          <div class="how-grid" data-how-grid>
-            <div class="how-line" aria-hidden="true">
+          <div class="pt-how-grid" data-how-grid>
+            <div class="pt-how-line" aria-hidden="true">
               <i data-how-line></i>
             </div>
-            <article class="how-card" data-how-card>
-              <span class="how-num" aria-hidden="true">1</span>
+            <article class="pt-how-card" data-how-card>
+              <span class="pt-how-num" aria-hidden="true">1</span>
               <h3>Add your profiles</h3>
               <p>Create an entity for a person, shop, or utility bill in one tap. Set initial opening balances without hassle.</p>
-              <div class="how-art" aria-hidden="true">
-                <div class="ui-avatars">
-                  <span class="ui-avatar" data-tone="brand" data-how-pop>M</span>
-                  <span class="ui-avatar" data-tone="mint" data-how-pop>S</span>
-                  <span class="ui-avatar" data-tone="sky" data-how-pop>J</span>
-                  <span class="ui-avatar" data-tone="sun" data-how-pop>+</span>
+              <div class="pt-how-art" aria-hidden="true">
+                <div class="pt-ui-avatars">
+                  <span class="pt-ui-avatar" data-tone="brand" data-how-pop>M</span>
+                  <span class="pt-ui-avatar" data-tone="mint" data-how-pop>S</span>
+                  <span class="pt-ui-avatar" data-tone="sky" data-how-pop>J</span>
+                  <span class="pt-ui-avatar" data-tone="sun" data-how-pop>+</span>
                 </div>
-                <div class="how-invite" data-how-pop>
+                <div class="pt-how-invite" data-how-pop>
                   Hamad Raza · Person
-                  <span class="ui-pill">Active</span>
+                  <span class="pt-ui-pill">Active</span>
                 </div>
               </div>
             </article>
-            <article class="how-card" data-how-card>
-              <span class="how-num" aria-hidden="true">2</span>
+            <article class="pt-how-card" data-how-card>
+              <span class="pt-how-num" aria-hidden="true">2</span>
               <h3>Record transactions</h3>
               <p>Tap the quick action button, pick Give or Receive Payment, enter the rupee amount, and save in under 3 seconds.</p>
-              <div class="how-art" aria-hidden="true">
-                <div class="how-split">
+              <div class="pt-how-art" aria-hidden="true">
+                <div class="pt-how-split">
                   <span id="demoPayLabel">Pay Rs. 7k</span>
                   <span id="demoRecLabel">Rec Rs. 0</span>
                   <span>Paisa Math</span>
                 </div>
-                <div class="how-slider" id="demoSlider" style="--fill:40%" tabindex="0" role="slider" aria-label="Transaction Amount Slider" aria-valuenow="7020" aria-valuemin="0" aria-valuemax="20000">
+                <div class="pt-how-slider" id="demoSlider" style="--fill:40%" tabindex="0" role="slider" aria-label="Transaction Amount Slider" aria-valuenow="7020" aria-valuemin="0" aria-valuemax="20000">
                   <i data-how-fill></i>
                   <b data-how-thumb></b>
                 </div>
-                <div class="how-invite" data-how-pop>
+                <div class="pt-how-invite" data-how-pop>
                   <span id="demoPaymentPill">Payment · Rs. 7,020</span>
-                  <span class="ui-pill">Saved</span>
+                  <span class="pt-ui-pill">Saved</span>
                 </div>
               </div>
             </article>
-            <article class="how-card" data-how-card>
-              <span class="how-num" aria-hidden="true">3</span>
+            <article class="pt-how-card" data-how-card>
+              <span class="pt-how-num" aria-hidden="true">3</span>
               <h3>Audit & export data</h3>
               <p>
                 Review your updated balance sheet instantly. Search any past entry or download spreadsheet-ready Excel CSV backups anytime.
               </p>
-              <div class="how-art" aria-hidden="true">
-                <div class="how-settled" data-how-pop>
+              <div class="pt-how-art" aria-hidden="true">
+                <div class="pt-how-settled" data-how-pop>
                   <svg viewBox="0 0 32 32">
                     <path d="M8 16.5l5.5 5.5L24 10.5" data-how-check/>
                   </svg>
                   All records saved offline
                 </div>
-                <div class="how-invite" data-how-pop>
+                <div class="pt-how-invite" data-how-pop>
                   <span>Balances updated</span>
-                  <span class="ui-pill">Live</span>
+                  <span class="pt-ui-pill">Live</span>
                 </div>
               </div>
             </article>
@@ -375,35 +377,35 @@
       <!-- ====================================================================== -->
       <!-- SOCIAL PROOF & REVIEWS
       <!-- ====================================================================== -->
-      <section class="section proof" data-section="proof" id="reviews" aria-labelledby="proof-title">
-        <div class="wrap">
-          <div class="section-head" data-reveal>
-            <p class="kicker">Trusted by users</p>
-            <h2 class="display h2" id="proof-title">Designed for merchants, professionals & households.</h2>
+      <section class="pt-section pt-proof" data-section="proof" id="reviews" aria-labelledby="proof-title">
+        <div class="pt-wrap">
+          <div class="pt-section-head" data-reveal>
+            <p class="pt-kicker">Trusted by users</p>
+            <h2 class="pt-display pt-h2" id="proof-title">Designed for merchants, professionals & households.</h2>
           </div>
-          <div class="stats" data-stats>
-            <div class="stat">
-              <p class="stat-num h2" data-count>100%</p>
-              <p class="stat-label">Offline operation on device</p>
+          <div class="pt-stats" data-stats>
+            <div class="pt-stat">
+              <p class="pt-stat-num pt-h2" data-count>100%</p>
+              <p class="pt-stat-label">Offline operation on device</p>
             </div>
-            <div class="stat">
-              <p class="stat-num h2" data-count>0 Ms</p>
-              <p class="stat-label">Network latency & zero cloud lag</p>
+            <div class="pt-stat">
+              <p class="pt-stat-num pt-h2" data-count>0 Ms</p>
+              <p class="pt-stat-label">Network latency & zero cloud lag</p>
             </div>
-            <div class="stat">
-              <p class="stat-num h2" data-count>Exact</p>
-              <p class="stat-label">Integer paisa math calculation</p>
+            <div class="pt-stat">
+              <p class="pt-stat-num pt-h2" data-count>Exact</p>
+              <p class="pt-stat-label">Integer paisa math calculation</p>
             </div>
-            <div class="stat">
-              <p class="stat-num h2" data-count>3 Sec</p>
-              <p class="stat-label">Average time to log payments</p>
+            <div class="pt-stat">
+              <p class="pt-stat-num pt-h2" data-count>3 Sec</p>
+              <p class="pt-stat-label">Average time to log payments</p>
             </div>
           </div>
-          <div class="reviews" data-reveal-group>
-            <div class="rating-card">
+          <div class="pt-reviews" data-reveal-group>
+            <div class="pt-rating-card">
               <div>
-                <p class="rating-num h2">4.8</p>
-                <div class="stars" role="img" aria-label="4.8 out of 5 stars">
+                <p class="pt-rating-num pt-h2">4.9</p>
+                <div class="pt-stars" role="img" aria-label="4.9 out of 5 stars">
                   <svg aria-hidden="true">
                     <use href="#star"/>
                   </svg>
@@ -423,36 +425,36 @@
               </div>
               <p>Rated 4.9 by local merchants.<small>100% verified offline satisfaction.</small></p>
             </div>
-            <figure class="quote">
+            <figure class="pt-quote">
               <blockquote>
                 “I used paper registers for years and lost receipts constantly. PayTrack replaced my notebook completely and computes exact balances without internet.”
               </blockquote>
               <figcaption>
-                <span class="ui-avatar" data-tone="sun" aria-hidden="true">H</span>
+                <span class="pt-ui-avatar" data-tone="sun" aria-hidden="true">H</span>
                 <div>
                   <b>Hamad R.</b>
                   <span>Retail Shop Owner, Lahore</span>
                 </div>
               </figcaption>
             </figure>
-            <figure class="quote">
+            <figure class="pt-quote">
               <blockquote>
                 “The separation between what I have to pay and what I have to receive is brilliant. No confusing net math, no complex menus, just clean numbers.”
               </blockquote>
               <figcaption>
-                <span class="ui-avatar" data-tone="mint" aria-hidden="true">T</span>
+                <span class="pt-ui-avatar" data-tone="mint" aria-hidden="true">T</span>
                 <div>
                   <b>Tariq &amp; Usman</b>
                   <span>Wholesale Traders, Karachi</span>
                 </div>
               </figcaption>
             </figure>
-            <figure class="quote">
+            <figure class="pt-quote">
               <blockquote>
                 “I track all monthly electricity, internet, and shop rent bills here. Partial payments work flawlessly and excess payment warnings save money.”
               </blockquote>
               <figcaption>
-                <span class="ui-avatar" data-tone="sky" aria-hidden="true">F</span>
+                <span class="pt-ui-avatar" data-tone="sky" aria-hidden="true">F</span>
                 <div>
                   <b>Farhan K.</b>
                   <span>Freelance Studio, Islamabad</span>
@@ -466,53 +468,53 @@
       <!-- ====================================================================== -->
       <!-- PRICING PLANS
       <!-- ====================================================================== -->
-      <section class="section pricing" data-section="pricing" data-pricing data-period="monthly" id="pricing" aria-labelledby="pricing-title">
-        <div class="wrap">
-          <div class="pricing-top">
-            <div class="section-head" data-reveal>
-              <p class="kicker">Pricing</p>
-              <h2 class="display h2" id="pricing-title">Simple, fair & 100% offline license.</h2>
+      <section class="pt-section pt-pricing" data-section="pricing" data-pricing data-period="monthly" id="pricing" aria-labelledby="pricing-title">
+        <div class="pt-wrap">
+          <div class="pt-pricing-top">
+            <div class="pt-section-head" data-reveal>
+              <p class="pt-kicker">Pricing</p>
+              <h2 class="pt-display pt-h2" id="pricing-title">Simple, fair & 100% offline license.</h2>
             </div>
           </div>
-          <div class="plans" data-reveal-group>
-            <article class="plan" data-plan>
+          <div class="pt-plans" data-reveal-group>
+            <article class="pt-plan" data-plan>
               <h3>Free Trial</h3>
-              <p class="plan-blurb">Full access to explore all features on your mobile phone.</p>
-              <p class="price"><span class="price-amount"><span>Rs. 0</span></span><span class="price-per">14 days</span></p>
-              <p class="price-note"><span>No credit card or phone login required.</span></p>
-              <ul class="plan-list">
+              <p class="pt-plan-blurb">Full 3-day access to explore all features on your mobile phone.</p>
+              <p class="pt-price"><span class="pt-price-amount"><span>Rs. 0</span></span><span class="pt-price-per">3 days</span></p>
+              <p class="pt-price-note"><span>No credit card or phone login required.</span></p>
+              <ul class="pt-plan-list">
                 <li>100% offline ledger & khata tracking</li>
                 <li>Persons, Shops & Utility Bills categories</li>
                 <li>Fast payment entry in under 3 seconds</li>
                 <li>Audit logs & CSV export test</li>
               </ul>
-              <a class="btn btn--ghost" href="#pricing">
+              <a class="pt-btn pt-btn-ghost" href="assets/downloads/paytrack-free.apk" download="PayTrack-Free.apk">
                 Start Free Trial
               </a>
             </article>
-            <article class="plan plan--featured" data-plan>
-              <span class="plan-flag">Most Popular · Lifetime</span>
+            <article class="pt-plan pt-plan-featured" data-plan>
+              <span class="pt-plan-flag">Most Popular · Lifetime</span>
               <h3>Unlimited</h3>
-              <p class="plan-blurb">One-time purchase for permanent offline accounting on your phone.</p>
-              <p class="price">
-                <span class="price-amount">
+              <p class="pt-plan-blurb">One-time purchase for permanent offline accounting on your phone.</p>
+              <p class="pt-price">
+                <span class="pt-price-amount">
                   <span data-billing="monthly">Rs. 1,499</span>
                   <span data-billing="yearly">Rs. 1,499</span>
                 </span>
-                <span class="price-per">Lifetime</span>
+                <span class="pt-price-per">Lifetime</span>
               </p>
-              <p class="price-note">
+              <p class="pt-price-note">
                 <span data-billing="monthly">One-time payment · Zero recurring subscriptions.</span>
                 <span data-billing="yearly">Permanent offline activation for your phone.</span>
               </p>
-              <ul class="plan-list">
+              <ul class="pt-plan-list">
                 <li>Unlimited profiles, khata & debt records</li>
-                <li>Exact integer paisa math with zero rounding lag</li>
+                <li>Exact integer paisa math with zero rounding errors</li>
                 <li>Unlimited Excel CSV exports</li>
-                <li>Encrypted local backup & restore</li>
+                <li>Secure local JSON backup & restore</li>
                 <li>Direct WhatsApp support from developer</li>
               </ul>
-              <a class="btn btn--brand" href="https://wa.me/923260735090?text=Hello%20Rehan,%20I%20want%20to%20buy%20PayTrack%20Unlimited%20license." target="_blank" rel="noopener noreferrer">
+              <a class="pt-btn pt-btn-brand" href="https://wa.me/923260735090?text=Hello%20Rehan,%20I%20want%20to%20buy%20PayTrack%20Unlimited%20license." target="_blank" rel="noopener noreferrer">
                 Buy Now on WhatsApp
               </a>
             </article>
@@ -523,12 +525,12 @@
       <!-- ====================================================================== -->
       <!-- FREQUENTLY ASKED QUESTIONS (FAQ)
       <!-- ====================================================================== -->
-      <section class="section faq" data-section="faq" data-faq id="faq" aria-labelledby="faq-title">
-        <div class="wrap faq-grid">
-          <div class="section-head" data-reveal>
-            <p class="kicker">Questions</p>
-            <h2 class="display h2" id="faq-title">Everything you need to know.</h2>
-            <p class="lede">
+      <section class="pt-section pt-faq" data-section="faq" data-faq id="faq" aria-labelledby="faq-title">
+        <div class="pt-wrap pt-faq-grid">
+          <div class="pt-section-head" data-reveal>
+            <p class="pt-kicker">Questions</p>
+            <h2 class="pt-display pt-h2" id="faq-title">Everything you need to know.</h2>
+            <p class="pt-lede">
               Something else? Write to
               <a href="https://wa.me/923260735090" target="_blank" rel="noopener noreferrer">
                 WhatsApp Support
@@ -536,74 +538,74 @@
               and our team replies instantly.
             </p>
           </div>
-          <div class="faq-list" data-faq-list>
-            <div class="faq-item" data-faq-open>
-              <h3 class="faq-q">
+          <div class="pt-faq-list" data-faq-list>
+            <div class="pt-faq-item" data-faq-open>
+              <h3 class="pt-faq-q">
                 <button type="button" data-faq-q>
                   Does PayTrack require an internet connection?
-                  <span class="faq-icon" aria-hidden="true"></span>
+                  <span class="pt-faq-icon" aria-hidden="true"></span>
                 </button>
               </h3>
-              <div class="faq-a" data-faq-a>
+              <div class="pt-faq-a" data-faq-a>
                 <p>
                   No, PayTrack is 100% offline. All your data is stored securely in your device's native database. You can record transactions, audit ledgers, and manage debts anywhere without Wi-Fi or mobile data.
                 </p>
               </div>
             </div>
-            <div class="faq-item">
-              <h3 class="faq-q">
-                <button type="button" data-faq-q>How are balances calculated?<span class="faq-icon" aria-hidden="true"></span></button>
+            <div class="pt-faq-item">
+              <h3 class="pt-faq-q">
+                <button type="button" data-faq-q>How are balances calculated?<span class="pt-faq-icon" aria-hidden="true"></span></button>
               </h3>
-              <div class="faq-a" data-faq-a>
+              <div class="pt-faq-a" data-faq-a>
                 <p>
                   PayTrack maintains strict separation between 'You Have to Pay' and 'You Have to Receive'. It never silently subtracts them to obscure liabilities. Every calculation uses exact integer paisa arithmetic (1 PKR = 100 Paisa) to prevent rounding errors.
                 </p>
               </div>
             </div>
-            <div class="faq-item">
-              <h3 class="faq-q">
+            <div class="pt-faq-item">
+              <h3 class="pt-faq-q">
                 <button type="button" data-faq-q>
                   Can I export my financial data to Excel?
-                  <span class="faq-icon" aria-hidden="true"></span>
+                  <span class="pt-faq-icon" aria-hidden="true"></span>
                 </button>
               </h3>
-              <div class="faq-a" data-faq-a>
+              <div class="pt-faq-a" data-faq-a>
                 <p>
-                  Yes. With a single tap, you can export your entire transaction history as a standard CSV file that opens immediately in Microsoft Excel, Google Sheets, or Apple Numbers. You can also generate encrypted JSON database backups.
+                  Yes. With a single tap, you can export your entire transaction history as a standard CSV file that opens immediately in Microsoft Excel, Google Sheets, or Apple Numbers. You can also generate complete local JSON database backups.
                 </p>
               </div>
             </div>
-            <div class="faq-item">
-              <h3 class="faq-q">
+            <div class="pt-faq-item">
+              <h3 class="pt-faq-q">
                 <button type="button" data-faq-q>
                   What happens if I change or lose my phone?
-                  <span class="faq-icon" aria-hidden="true"></span>
+                  <span class="pt-faq-icon" aria-hidden="true"></span>
                 </button>
               </h3>
-              <div class="faq-a" data-faq-a>
+              <div class="pt-faq-a" data-faq-a>
                 <p>
                   Because PayTrack is 100% offline and private, we never store your data on external servers. You can export a JSON backup to your SD card, Google Drive, or email anytime and restore it on any new phone with one click.
                 </p>
               </div>
             </div>
-            <div class="faq-item">
-              <h3 class="faq-q">
+            <div class="pt-faq-item">
+              <h3 class="pt-faq-q">
                 <button type="button" data-faq-q>
                   Is my financial information private and secure?
-                  <span class="faq-icon" aria-hidden="true"></span>
+                  <span class="pt-faq-icon" aria-hidden="true"></span>
                 </button>
               </h3>
-              <div class="faq-a" data-faq-a>
+              <div class="pt-faq-a" data-faq-a>
                 <p>
                   Absolutely. Zero trackers, zero advertisements, and zero cloud telemetry. Your private accounts, customer names, and debt records never leave your physical smartphone hardware.
                 </p>
               </div>
             </div>
-            <div class="faq-item">
-              <h3 class="faq-q">
-                <button type="button" data-faq-q>Which phones does it run on?<span class="faq-icon" aria-hidden="true"></span></button>
+            <div class="pt-faq-item">
+              <h3 class="pt-faq-q">
+                <button type="button" data-faq-q>Which phones does it run on?<span class="pt-faq-icon" aria-hidden="true"></span></button>
               </h3>
-              <div class="faq-a" data-faq-a>
+              <div class="pt-faq-a" data-faq-a>
                 <p>
                   Android smartphones (Android 8.0 and above) as well as Apple iPhone (iOS 15 and above). Both versions deliver the exact same high-speed offline performance.
                 </p>
@@ -617,21 +619,21 @@
     <!-- ====================================================================== -->
     <!-- FOOTER                                                                 -->
     <!-- ====================================================================== -->
-    <footer class="footer" data-section="footer">
-      <div class="wrap">
-        <div class="footer-top">
+    <footer class="pt-footer" data-section="footer">
+      <div class="pt-wrap">
+        <div class="pt-footer-top">
           <div>
-            <a class="brand-lockup" href="#top" aria-label="PayTrack, back to the top">
-              <svg class="brand-mark" aria-hidden="true">
+            <a class="pt-brand-lockup" href="#top" aria-label="PayTrack, back to the top">
+              <svg class="pt-brand-mark" aria-hidden="true">
                 <use href="#mark"/>
               </svg>
               <span>PayTrack</span>
             </a>
-            <p class="footer-blurb">
-              100% offline personal khata, debt manager, and utility bill tracker. Built with zero-shadow focus for speed, exact accuracy, and complete privacy.
+            <p class="pt-footer-blurb">
+              100% offline personal khata, debt manager, and utility bill tracker. Built with zero-distraction focus for speed, exact accuracy, and complete privacy.
             </p>
           </div>
-          <div class="footer-col">
+          <div class="pt-footer-col">
             <h3>Sections</h3>
             <ul>
               <li><a href="#features">Features</a></li>
@@ -639,9 +641,10 @@
               <li><a href="#reviews">Benefits</a></li>
               <li><a href="#pricing">Pricing Plans</a></li>
               <li><a href="#faq">FAQ</a></li>
+              <li><a href="docs.html">Documentation</a></li>
             </ul>
           </div>
-          <div class="footer-col">
+          <div class="pt-footer-col">
             <h3>Features</h3>
             <ul>
               <li><a href="#features">Separated Balances</a></li>
@@ -650,10 +653,10 @@
               <li><a href="#features">Audit & CSV Export</a></li>
             </ul>
           </div>
-          <div class="footer-col">
+          <div class="pt-footer-col">
             <h3>Get Started</h3>
             <ul>
-              <li><a href="#pricing">Free Trial</a></li>
+              <li><a href="assets/downloads/paytrack-free.apk" download="PayTrack-Free.apk">Free Trial</a></li>
               <li>
                 <a href="https://wa.me/923260735090?text=Hello%20Rehan,%20I%20want%20to%20buy%20PayTrack%20Unlimited%20license." target="_blank" rel="noopener noreferrer">
                   Buy Now
@@ -667,7 +670,7 @@
             </ul>
           </div>
         </div>
-        <div class="footer-base">
+        <div class="pt-footer-base">
           <p>&copy; 2026 PayTrack. All rights reserved.</p>
           <p>
             Designed and Developed by
@@ -677,7 +680,7 @@
           </p>
         </div>
       </div>
-      <div class="footer-mark" data-mark="PayTrack" aria-hidden="true">
+      <div class="pt-footer-mark" data-mark="PayTrack" aria-hidden="true">
       </div>
     </footer>
     <script src="assets/vendor/three.global.min.js"></script>
@@ -687,181 +690,6 @@
     <script src="assets/vendor/lenis.min.js"></script>
     <script src="assets/screens-fallback.js"></script>
     <script src="assets/script.js"></script>
-    <script>
-(function() {
-  function initFaqHover() {
-    var faqItems = document.querySelectorAll('.faq-item');
-    var hoverTimer = null;
-    faqItems.forEach(function(item) {
-      var btn = item.querySelector('[data-faq-q]');
-      if (!btn) return;
-      item.addEventListener('mouseenter', function() {
-        clearTimeout(hoverTimer);
-        hoverTimer = setTimeout(function() {
-          if (btn.getAttribute('aria-expanded') !== 'true') {
-            btn.click();
-          }
-        }, 40);
-      });
-      item.addEventListener('mouseleave', function() {
-        clearTimeout(hoverTimer);
-      });
-    });
-  }
-  function initInteractiveSlider() {
-    var slider = document.getElementById('demoSlider') || document.querySelector('.how-slider');
-    if (!slider) return;
-
-    var fillEl = slider.querySelector('i');
-    var thumbEl = slider.querySelector('b');
-    var artContainer = slider.closest('.how-art') || slider;
-    var pill = document.getElementById('demoPaymentPill') || artContainer.querySelector('.ui-pill');
-    var payLabel = document.getElementById('demoPayLabel') || artContainer.querySelector('.how-split span:first-child');
-    var recLabel = document.getElementById('demoRecLabel') || (artContainer.querySelectorAll('.how-split span')[1]);
-
-    var currentPct = 40;
-    var isDragging = false;
-    var userInteracted = false;
-
-    function calculateAmount(pct) {
-      if (pct <= 0) return 0;
-      var raw;
-      if (pct <= 40) {
-        raw = (pct / 40) * 7020;
-      } else {
-        raw = 7020 + ((pct - 40) / 60) * (20000 - 7020);
-      }
-      var rounded = Math.round(raw / 10) * 10;
-      if (Math.abs(pct - 40) < 1.2) rounded = 7020;
-      return rounded;
-    }
-
-    function applyPercent(pct, fromUser) {
-      pct = Math.max(0, Math.min(100, pct));
-      currentPct = pct;
-      if (fromUser) userInteracted = true;
-
-      slider.style.setProperty('--fill', pct + '%');
-      if (fillEl) {
-        fillEl.style.width = pct + '%';
-        fillEl.style.transform = 'none';
-      }
-      if (thumbEl) {
-        thumbEl.style.left = pct + '%';
-      }
-
-      var amount = calculateAmount(pct);
-      slider.setAttribute('aria-valuenow', amount);
-
-      if (pill) {
-        pill.textContent = 'Payment · Rs. ' + amount.toLocaleString('en-US');
-      }
-      if (payLabel) {
-        var payK = Math.max(0, Math.round(amount / 1000));
-        payLabel.textContent = 'Pay Rs. ' + payK + 'k';
-      }
-      if (recLabel) {
-        if (pct > 75) {
-          var recVal = Math.round(((pct - 75) / 25) * 5000 / 10) * 10;
-          recLabel.textContent = 'Rec Rs. ' + Math.round(recVal / 1000) + 'k';
-        } else {
-          recLabel.textContent = 'Rec Rs. 0';
-        }
-      }
-    }
-
-    function getPctFromEvent(e) {
-      var rect = slider.getBoundingClientRect();
-      var clientX = e.clientX;
-      if (clientX === undefined && e.touches && e.touches.length > 0) {
-        clientX = e.touches[0].clientX;
-      }
-      if (clientX === undefined) return currentPct;
-      var x = clientX - rect.left;
-      return (x / rect.width) * 100;
-    }
-
-    slider.addEventListener('pointerdown', function(e) {
-      isDragging = true;
-      slider.classList.add('is-dragging');
-      try { slider.setPointerCapture(e.pointerId); } catch (err) {}
-      applyPercent(getPctFromEvent(e), true);
-    });
-
-    slider.addEventListener('pointermove', function(e) {
-      if (!isDragging) return;
-      applyPercent(getPctFromEvent(e), true);
-    });
-
-    function stopDrag(e) {
-      if (!isDragging) return;
-      isDragging = false;
-      slider.classList.remove('is-dragging');
-      try {
-        if (e && e.pointerId !== undefined) {
-          slider.releasePointerCapture(e.pointerId);
-        }
-      } catch (err) {}
-    }
-
-    slider.addEventListener('pointerup', stopDrag);
-    slider.addEventListener('pointercancel', stopDrag);
-
-    // Mouse wheel scrolling directly over the slider / art card
-    artContainer.addEventListener('wheel', function(e) {
-      var delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
-      if (delta !== 0) {
-        var step = delta > 0 ? 3.5 : -3.5;
-        applyPercent(currentPct + step, true);
-      }
-    }, { passive: true });
-
-    // Keyboard navigation
-    slider.addEventListener('keydown', function(e) {
-      if (e.key === 'ArrowRight' || e.key === 'ArrowUp') {
-        e.preventDefault();
-        applyPercent(currentPct + 5, true);
-      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') {
-        e.preventDefault();
-        applyPercent(currentPct - 5, true);
-      } else if (e.key === 'Home') {
-        e.preventDefault();
-        applyPercent(0, true);
-      } else if (e.key === 'End') {
-        e.preventDefault();
-        applyPercent(100, true);
-      }
-    });
-
-    // Page Scroll updating
-    function onScroll() {
-      if (userInteracted) return;
-      var rect = artContainer.getBoundingClientRect();
-      var windowH = window.innerHeight || document.documentElement.clientHeight;
-      var progress = (windowH - rect.top) / (windowH + rect.height);
-      if (progress >= 0.15 && progress <= 0.85) {
-        var clamped = Math.max(0, Math.min(1, (progress - 0.2) / 0.45));
-        var targetPct = 12 + clamped * (40 - 12);
-        applyPercent(targetPct, false);
-      }
-    }
-    window.addEventListener('scroll', onScroll, { passive: true });
-
-    // Initial setup
-    applyPercent(40, false);
-  }
-
-  function initAll() {
-    initFaqHover();
-    initInteractiveSlider();
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initAll);
-  } else {
-    initAll();
-  }
-})();
-</script>
+    <script src="assets/interactions.js"></script>
   </body>
 </html>

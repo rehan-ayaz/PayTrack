@@ -15,7 +15,7 @@ Official responsive landing page for **PayTrack** — the 100% offline personal 
 
 ```text
 landing/
-├── index.html                    # Production landing page (with embedded screen textures)
+├── index.html                    # Production landing page
 ├── favicon.svg                   # PayTrack brand favicon
 ├── assets/
 │   ├── style.css                 # Main design stylesheet (fintech light theme)
@@ -31,12 +31,17 @@ landing/
 Because the landing page utilizes modern ES modules and WebGL canvas textures, it should be served via an HTTP server:
 
 ```bash
-# Via Vite Dev Server
-npm run dev
-
-# Or via Python HTTP server
-python -m http.server 8080 --directory landing
+# Run from this landing directory
+python -m http.server 8080 --bind 127.0.0.1
 ```
 
 ---
 Designed and Developed by **Rehan Ayaz**
+
+## Maintenance and release
+
+Read `docs/CODE-STANDARDS.md` before edits. All custom classes use `pt-`. See `docs/FINAL-REPORT.md` for tested results and pending checks.
+
+Use `release/paytrack-prelaunch.zip` as the review package. It contains only the public HTML, assets, icons, favicon, robots and sitemap. It deliberately excludes local backups, tools, audit files and hosting configurations. No deployment has been performed. Keep original backups private.
+
+`node tools/verify.cjs` verifies class references and JavaScript syntax using the existing parent workspace development packages; it adds no website dependency.

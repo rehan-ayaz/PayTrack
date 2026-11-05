@@ -24,3 +24,12 @@ desktop.ini
 *.backup
 *.tmp
 *.log
+
+# Local audit backups, internal tools and audit documentation
+tools/
+docs/
+release/
+*.zip
+*.backup
+*.tmp
+*.log
